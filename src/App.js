@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button/'
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+
 import './App.css';
+import './theme.js'
+import 'typeface-roboto'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container maxWidth="sm">
+            <header className="App-header">
+                <Box my={4}>
+                    <Typography variant="h4" component="h1" gutterBottom>
+                        Stand App
+                    </Typography>
+                    <input type="text" className="input"/>
+                    <Button>Start</Button>
+                </Box>
+            </header>
+        </Container>
+    );
 }
 
 export default App;
